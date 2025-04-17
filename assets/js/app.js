@@ -295,10 +295,10 @@
           $(".top-coming").html(html);
           $(this).html(
             e.strftime(
-              "<li><h2>%D</h2><h6>Days</h6></li>\
-              <li><h2>%H</h2><h6>Hrs</h6></li>\
-              <li><h2>%M</h2><h6>Min</h6></li>\
-              <li><h2><span>%S</span></h2><h6>Sec</h6></li>"
+              "<li><h2>%D</h2><h6>Dias</h6></li>\
+              <li><h2>%H</h2><h6>Horas</h6></li>\
+              <li><h2>%M</h2><h6>Minutos</h6></li>\
+              <li><h2><span>%S</span></h2><h6>Seg</h6></li>"
             )
           );
         });
@@ -552,6 +552,49 @@
   };
   Init.i();
 })(window, document, jQuery);
+
+$(document).ready(function(){
+  $('.team-slider').slick({
+      dots: true,
+      arrows: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      centerMode: true,
+      variableWidth: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      responsive: [
+          {
+              breakpoint: 992,
+              settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '40px',
+                  slidesToShow: 1
+              }
+          },
+          {
+              breakpoint: 768,
+              settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '40px',
+                  slidesToShow: 1
+              }
+          },
+          {
+              breakpoint: 480,
+              settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '20px',
+                  slidesToShow: 1
+              }
+          }
+      ]
+  });
+});
 
 // var iphone= $('.light');
 // var camera= $('.camera');
