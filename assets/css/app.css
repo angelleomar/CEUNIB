@@ -410,19 +410,19 @@ strong {
 }
 
 .color-primary-2 {
-  color: #f1f9ac !important;
+  color: #8c8c11 !important;
 }
 
 .bg-primary-2 {
-  background-color: #f1f9ac !important;
+  background-color: #8c8c11 !important;
 }
 
 .color-primary-3 {
-  color: #f1f9ac !important;
+  color: #8c8c11 !important;
 }
 
 .bg-primary-3 {
-  background-color: #f1f9ac !important;
+  background-color: #8c8c11 !important;
 }
 
 .color-white {
@@ -3920,7 +3920,7 @@ footer .copyright_row P {
   right: 16px;
   padding: 0px 8px;
   color: #fefcfb;
-  background-color: #f1f9ac;
+  background-color: #8c8c11;
   border-radius: 5px;
 }
 .blog_card:hover .blog_card_img_block img {
@@ -4042,7 +4042,7 @@ footer .copyright_row P {
 .blog_list_card .blog_card_text_block .date {
   padding: 0px 8px;
   color: #fefcfb;
-  background-color: #f1f9ac;
+  background-color: #8c8c11;
   border-radius: 5px;
   width: fit-content;
 }
