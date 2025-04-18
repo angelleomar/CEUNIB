@@ -2528,31 +2528,7 @@ input[type="search"]::-webkit-search-results-decoration {
   > a.active {
   color: #E8C633;
 }
-.main-menu
-  .main-menu__left
-  .main-menu__nav
-  .main-menu__list
-  > li
-  > a.active::before,
-.main-menu
-  .main-menu__left
-  .main-menu__nav
-  .stricky-header
-  .main-menu__list
-  > li
-  > a.active::before {
-  position: relative;
-  left: 0;
-  top: 0;
-  border-radius: 0;
-  font-size: 11px;
-  font-weight: 600;
-  font-family: "Font Awesome 5 Pro";
-  content: "";
-  color: inherit;
-  line-height: 10px;
-  margin-right: 5px;
-}
+
 .main-menu .main-menu__left .main-menu__nav .main-menu__list > li > a:hover,
 .main-menu
   .main-menu__left
@@ -6304,54 +6280,9 @@ footer .copyright_row P {
   font-weight: 500;
   font-size: 21px;
   line-height: 130%;
+  padding-right: 30px; /* Espacio para la flecha */
 }
-@media (max-width: 992px) {
-  .faq .faq-block .accordion-button {
-    font-size: 20px;
-  }
-}
-@media (max-width: 767px) {
-  .faq .faq-block .accordion-button {
-    font-size: 19px;
-  }
-}
-@media (max-width: 575px) {
-  .faq .faq-block .accordion-button {
-    font-size: 18px;
-  }
-}
-.faq .faq-block .accordion-button.collapsed {
-  border-radius: 0px;
-  padding: 0;
-  background: none;
-  margin: 0;
-}
-.faq .faq-block .accordion-button.collapsed::after {
-  background-image: none !important;
-  content: "";
-  font-family: "Font Awesome 5 Pro";
-}
-.faq .faq-block .accordion-button:not(.collapsed) {
-  color: #2a322d;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-.faq .faq-block .accordion-button:focus {
-  border: none;
-  box-shadow: none;
-}
-.faq .faq-block .accordion-button::after {
-  content: "";
-  font-family: "Font Awesome 5 Pro";
-  background-image: none !important;
-  position: absolute;
-  right: -24px;
-  font-weight: 300;
-  color: #E8C633;
-  font-size: 30px;
-  cursor: pointer;
-}
+
 .faq .faq-block .accordion-collapse p {
   margin: 16px 0 0;
 }
@@ -6618,3 +6549,9 @@ footer .copyright_row P {
 .scroll-top:hover .scroll-top__circle path {
   stroke: #1a5cb0; /* Color más oscuro al hover */
 }
+
+    .counter_info,
+    .counter_info span,
+    .counter_info .odometer {
+        color: #b9a91c !important; /* Negro */
+    }
