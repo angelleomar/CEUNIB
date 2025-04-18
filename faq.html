@@ -7,36 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Preguntas frecuentes sobre las carreras y procesos del Centro Universitario del Istmo Bilingüe (CEUNIB) en Tapachula, Chiapas">
-    <meta name="keywords" content="CEUNIB, preguntas frecuentes, admisión, inscripción, becas, odontología, psicología, terapia física, enfermería">
-    
+    <meta name="keywords" content="CEUNIB, preguntas frecuentes, admisión, inscripción, odontología, psicología, terapia física, enfermería">
     <title>Preguntas Frecuentes | CEUNIB - Centro Universitario del Istmo Bilingüe</title>
-
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/media/favicon.ico">
-
     <!-- All CSS files -->
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/fontawesome/font-awesome.css">
     <link rel="stylesheet" href="assets/vendor/slickslider/slick.css">
-
     <!-- En el <head> -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link rel="stylesheet" href="assets/vendor/jquery-magnific-popup/jquery.magnific-popup.css">
     <link rel="stylesheet" href="assets/vendor/animate/animate.min.css">
     <link rel="stylesheet" href="assets/vendor/odometer/odometer.min.css">
     <link rel="stylesheet" href="assets/vendor/nice-select/nice-select.css">
     <link rel="stylesheet" href="assets/css/app.css">
-
 </head>
-
 <body class="custom-cursor locked">
-
     <!-- cursor style  -->
     <div class="custom-cursor__cursor"></div>
     <div class="custom-cursor__cursor-two"></div>
-
     <!-- Preloader-->
     <div id="preloader">
         <div class="book">
@@ -51,7 +41,6 @@
             </ul>
         </div>
     </div>
-
     <!-- Main Wrapper Start -->
     <div id="main-wrapper" class="main-wrapper">
         <!-- Header Area start -->
@@ -72,10 +61,10 @@
                                     <li class="dropdown">
                                         <a href="javascript:void(0);">Carreras</a>
                                         <ul>
-                                            <li><a href="licenciaturas.html">Odontología</a></li>
-                                            <li><a href="posgrados.html">Fisioterapeuta</a></li>
-                                            <li><a href="carreras.html">Psicología</a></li>
-                                            <li><a href="carreras.html">Enfermeria</a></li>
+                                            <li><a href="odontologia.html">Odontología</a></li>
+                                            <li><a href="pfisoterapia.html">Fisioterapeuta</a></li>
+                                            <li><a href="psicologia.html">Psicología</a></li>
+                                            <li><a href="enfermeria.html">Enfermeria</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="blog-detail.html">Blog</a></li>
@@ -166,15 +155,12 @@
                 <div class="faq-block">
                     <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse"
                         data-bs-target="#faq3" aria-expanded="true" aria-controls="faq3">
-                        <i class="fas fa-money-bill-wave me-2"></i> ¿Ofrecen becas o financiamiento?
+                        <i class="fas fa-money-bill-wave me-2"></i> ¿Ofrecen financiamiento?
                     </a>
                     <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3"
                         data-bs-parent="#accordionExample">
-                        <p>Sí, contamos con varios programas de becas:
+                        <p>Sí, contamos con varios programas de pagos flexibles:
                             <ul>
-                                <li>Beca por excelencia académica</li>
-                                <li>Beca deportiva</li>
-                                <li>Beca por situación económica</li>
                                 <li>Plan de pagos flexibles</li>
                             </ul>
                             Puedes solicitar información completa en nuestro departamento de promoción.
@@ -239,10 +225,12 @@
            
             </div>
             
+ <!-- Faq Area Start -->
+            
             <div class="col-lg-4">
                 <h6 class="color-primary mb-8">¿No encontraste tu respuesta?</h6>
                 <h2 class="mb-32">Envía tu <span class="fm-sec">pregunta</span></h2>
-                <form method="post" action="faq.html" class="form-validator">
+                <form id="faqForm" class="form-validator">
                     <div class="mb-24">
                         <input type="text" class="form-control p_lg" id="name" name="name" required
                             placeholder="Nombre completo">
@@ -277,6 +265,45 @@
     </div>
 </section>
 <!-- Faq Area End -->
+
+<!-- Asegúrate de tener Font Awesome cargado -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- JavaScript para el envío a WhatsApp -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('faqForm');
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Obtener los valores del formulario
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const carrera = document.getElementById('carrera').value;
+        const message = document.getElementById('message').value;
+        
+        // Crear el mensaje para WhatsApp
+        const whatsappMessage = `*Nueva consulta CEUNIB*%0A%0A` +
+                               `*Nombre:* ${name}%0A` +
+                               `*Email:* ${email}%0A` +
+                               `*Carrera de interés:* ${carrera || 'No especificada'}%0A` +
+                               `*Mensaje:* ${message}`;
+        
+        // Número de teléfono (9622207404)
+        const phoneNumber = '9622207404';
+        
+        // Crear el enlace de WhatsApp
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+        
+        // Abrir WhatsApp en una nueva pestaña
+        window.open(whatsappUrl, '_blank');
+        
+        // Opcional: Resetear el formulario
+        form.reset();
+    });
+});
+</script>
 
         <!-- Contact Banner Area Start -->
         <section class="pb-60">
