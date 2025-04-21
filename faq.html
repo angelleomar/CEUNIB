@@ -67,7 +67,6 @@
                                             <li><a href="enfermeria.html">Enfermeria</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="blog-detail.html">Blog</a></li>
                                     <li><a href="faq.html" class="active">Preguntas Frecuentes</a></li>
                                     <li><a href="contact.html">Contáctanos</a></li>
                                 </ul>
@@ -114,11 +113,12 @@
         </section>
         <!-- Page Title Banner End -->
 
-     <!-- Faq Area Start -->
+<!-- Faq Area Start -->
 <section class="faq py-60">
   <div class="container">
       <div class="row" id="accordionExample">
-          <div class="col-lg-8">
+          <!-- Columna izquierda - Preguntas frecuentes -->
+          <div class="col-lg-8 pe-lg-4">
               <h2 class="mb-32"><i class="fas fa-question-circle me-2"></i> Preguntas comunes sobre CEUNIB</h2>
               
               <div class="faq-block">
@@ -222,46 +222,46 @@
                   </div>
               </div>
           </div>
+          
+          <!-- Columna derecha - Formulario -->
+          <div class="col-lg-4 ps-lg-4">
+              <div class="sticky-top" style="top: 20px;">
+                  <h6 class="color-primary mb-8">¿No encontraste tu respuesta?</h6>
+                  <h2 class="mb-32">Envía tu <span class="fm-sec">pregunta</span></h2>
+                  <form id="faqForm" class="form-validator">
+                      <div class="mb-24">
+                          <input type="text" class="form-control p_lg" id="name" name="name" required
+                              placeholder="Nombre completo">
+                      </div>
+                      <div class="mb-24">
+                          <input type="email" class="form-control p_lg" id="email" name="email" required
+                              placeholder="Correo electrónico">
+                      </div>
+                      <div class="mb-24">
+                          <select class="form-select p_lg" id="carrera" name="carrera">
+                              <option value="">Selecciona una carrera</option>
+                              <option value="odontologia">Odontología</option>
+                              <option value="psicologia">Psicología</option>
+                              <option value="terapia">Terapia Física</option>
+                              <option value="enfermeria">Enfermería</option>
+                              <option value="general">Información general</option>
+                          </select>
+                      </div>
+                      <div class="mb-24">
+                          <textarea class="form-control p_lg" id="message" name="message" rows="4" required
+                              placeholder="Escribe tu pregunta aquí"></textarea>
+                      </div>
+                      <div class="text-end">
+                          <button type="submit" class="educate-btn">
+                              <span class="educate-btn__curve"></span>
+                              Enviar pregunta
+                          </button>
+                      </div>
+                  </form>
+              </div>
+          </div>
       </div>
   </div>
-</section>
-<!-- Faq Area End -->
-            <div class="col-lg-4">
-                <h6 class="color-primary mb-8">¿No encontraste tu respuesta?</h6>
-                <h2 class="mb-32">Envía tu <span class="fm-sec">pregunta</span></h2>
-                <form id="faqForm" class="form-validator">
-                    <div class="mb-24">
-                        <input type="text" class="form-control p_lg" id="name" name="name" required
-                            placeholder="Nombre completo">
-                    </div>
-                    <div class="mb-24">
-                        <input type="email" class="form-control p_lg" id="email" name="email" required
-                            placeholder="Correo electrónico">
-                    </div>
-                    <div class="mb-24">
-                        <select class="form-select p_lg" id="carrera" name="carrera">
-                            <option value="">Selecciona una carrera</option>
-                            <option value="odontologia">Odontología</option>
-                            <option value="psicologia">Psicología</option>
-                            <option value="terapia">Terapia Física</option>
-                            <option value="enfermeria">Enfermería</option>
-                            <option value="general">Información general</option>
-                        </select>
-                    </div>
-                    <div class="mb-24">
-                        <textarea class="form-control p_lg" id="message" name="message" rows="4" required
-                            placeholder="Escribe tu pregunta aquí"></textarea>
-                    </div>
-                    <div class="text-end">
-                        <button type="submit" class="educate-btn">
-                            <span class="educate-btn__curve"></span>
-                            Enviar pregunta
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 </section>
 <!-- Faq Area End -->
 
@@ -351,52 +351,46 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
           <div class="col-xl-2 col-lg-3 col-sm-6">
             <div class="footer_widget">
-              <h5 class="medium-black mb-16">Enlaces Rápidos</h5>
-              <ul class="unstyled list">
-                <li>
-                  <a href="carreras.html"><i class="fas fa-chevron-right"></i>Carreras</a>
-                </li>
-                <li>
-                  <a href="inscripciones.html"><i class="fas fa-chevron-right"></i>Inscripciones</a>
-                </li>
-                <li>
-                  <a href="eventos.html"><i class="fas fa-chevron-right"></i>Eventos</a>
-                </li>
-              </ul>
+                <h5 class="medium-black mb-16">Enlaces Rápidos</h5>
+                <ul class="unstyled list">
+                    <li>
+                        <a href="carreras.html"><i class="fas fa-chevron-right"></i>Carreras</a>
+                    </li>
+                    <li>
+                        <a href="faq.html"><i class="fas fa-chevron-right"></i>Inscripciones</a>
+                    </li>
+                    <li>
+                        <a href="contact.html"><i class="fas fa-chevron-right"></i>Eventos</a>
+                    </li>
+                </ul>
             </div>
-          </div>
-          <div class="col-xl-2 col-lg-3 col-sm-6">
+        </div>
+        <div class="col-xl-2 col-lg-3 col-sm-6">
             <div class="footer_widget">
-              <h5 class="medium-black mb-16">Explorar</h5>
-              <ul class="unstyled list">
-                <li>
-                  <a href="nosotros.html"><i class="fas fa-chevron-right"></i>Nosotros</a>
-                </li>
-                <li>
-                  <a href="galeria.html"><i class="fas fa-chevron-right"></i>Galería</a>
-                </li>
-                <li>
-                  <a href="docentes.html"><i class="fas fa-chevron-right"></i>Docentes</a>
-                </li>
-              </ul>
+                <h5 class="medium-black mb-16">Explorar</h5>
+                <ul class="unstyled list">
+                    <li>
+                        <a href="about.html"><i class="fas fa-chevron-right"></i>Nosotros</a>
+                    </li>
+                </ul>
             </div>
-          </div>
-          <div class="col-xl-2 col-lg-3 col-sm-6">
+        </div>
+        <div class="col-xl-2 col-lg-3 col-sm-6">
             <div class="footer_widget">
-              <h5 class="medium-black mb-16">Información</h5>
-              <ul class="unstyled list">
-                <li>
-                  <a href="login.html"><i class="fas fa-chevron-right"></i>Iniciar Sesión</a>
-                </li>
-                <li>
-                  <a href="preguntas.html"><i class="fas fa-chevron-right"></i>Preguntas Frecuentes</a>
-                </li>
-                <li>
-                  <a href="contacto.html"><i class="fas fa-chevron-right"></i>Contacto</a>
-                </li>
-              </ul>
+                <h5 class="medium-black mb-16">Información</h5>
+                <ul class="unstyled list">
+                    <li>
+                        <a href="faq.html"><i class="fas fa-chevron-right"></i>Preguntas Frecuentes</a>
+                    </li>
+                    <li>
+                        <a href="contact.html"><i class="fas fa-chevron-right"></i>Contacto</a>
+                    </li>
+                    <li>
+                        <a href="terminos-condiciones.html"><i class="fas fa-chevron-right"></i>Términos y Condiciones</a>
+                    </li>
+                </ul>
             </div>
-          </div>
+        </div>
           <div class="col-lg-3 col-sm-6">
             <div class="footer_widget">
               <h5 class="medium-black mb-16">Contacto</h5>
